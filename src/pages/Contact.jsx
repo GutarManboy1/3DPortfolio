@@ -1,24 +1,24 @@
-import React, {useRef, useState, Suspense} from 'react';
+import React, { useRef, useState, Suspense } from 'react';
 import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 
 import Fox from '../models/Fox';
-import Loader  from '../components/Loader';
+import Loader from '../components/Loader';
 import useAlert from '../hooks/useAlert';
 import Alert from '../components/Alert'
 
 const Contact = () => {
   const formRef = useRef(null);
-  const [form, setForm]= useState({name:"", email:"", message:""});
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setcurrentAnimation] = useState('idle');
 
-  const {alert, showAlert, hideAlert} = useAlert();
+  const { alert, showAlert, hideAlert } = useAlert();
 
-  const handleChange = (e)=> {
-    setForm({...form, [e.target.name]: e.target.value})
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
   };
-  const handleSubmit = (e)=> {
+  const handleSubmit = (e) => {
     console.log(formRef.current)
     e.preventDefault();
     setIsLoading(true);
@@ -31,39 +31,39 @@ const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
       {
         from_name: form.name,
-        to_name : "Glenn",
+        to_name: "Glenn",
         from_email: form.email,
         to_email: 'glenntorrens@gmail.com',
         message: form.message
       },
 
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-    ).then(()=>{
+    ).then(() => {
       setIsLoading(false);
-      showAlert({ show: true, text: 'Message has been sent!', type:'Success'});
+      showAlert({ show: true, text: 'Message has been sent!', type: 'Success' });
 
-      setTimeout(()=>{
+      setTimeout(() => {
         hideAlert();
         setcurrentAnimation('idle')
-        setForm({name:"", email:"", message:""});
-      },[3000]);
+        setForm({ name: "", email: "", message: "" });
+      }, [3000]);
 
 
-    }).catch((error)=>{
+    }).catch((error) => {
       setIsLoading(false);
       console.log(error);
       setcurrentAnimation('idle');
       console.log(error);
-      showAlert({ show: true, text: 'Oops, Where is your message?', type:'danger'});
+      showAlert({ show: true, text: 'Oops, Where is your message?', type: 'danger' });
     })
   };
 
-  const handleFocus = ()=> setcurrentAnimation('walk');
-  const handleBlur = ()=> setcurrentAnimation('idle');
+  const handleFocus = () => setcurrentAnimation('walk');
+  const handleBlur = () => setcurrentAnimation('idle');
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container h-[100vh]'>
-      {alert.show && <Alert {...alert}/>}
+      {alert.show && <Alert {...alert} />}
 
 
 
@@ -72,10 +72,10 @@ const Contact = () => {
         <h1 className='head-text'>Let's Get in Touch</h1>
 
         <form
-              ref={formRef}
-              className='w-full flex flex-col gap-7 mt-14'
-              onSubmit= {handleSubmit}
-              >
+          ref={formRef}
+          className='w-full flex flex-col gap-7 mt-14'
+          onSubmit={handleSubmit}
+        >
 
 
           <label className='text-black-500 font-semibold'>
@@ -128,8 +128,8 @@ const Contact = () => {
             disabled={isLoading}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            >
-              {isLoading? 'Sending...': 'Send Message'}
+          >
+            {isLoading ? 'Sending...' : 'Send Message'}
 
           </button>
         </form>
@@ -138,24 +138,24 @@ const Contact = () => {
       <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
         <Canvas
           camera={{
-            position:[0,0,5],
-            fov:75,
-            near:0.1,
-            far:1000
+            position: [0, 0, 5],
+            fov: 75,
+            near: 0.1,
+            far: 1000
 
           }}
         >
-          <directionalLight intensity={2.5} position={[0,0,1]} />
+          <directionalLight intensity={2.5} position={[0, 0, 1]} />
 
-            <Suspense fallback={<Loader />}>
-              <Fox
-                currentAnimation={currentAnimation}
-                position={[0.5, 0.35, 0]}
-                rotation={[12.6, -0.6, 0]}
-                scale={[0.5, 0.5, 0.5]}
-              />
+          <Suspense fallback={<Loader />}>
+            <Fox
+              currentAnimation={currentAnimation}
+              position={[0.5, 0.35, 0]}
+              rotation={[12.6, -0.6, 0]}
+              scale={[0.5, 0.5, 0.5]}
+            />
 
-            </Suspense>
+          </Suspense>
         </Canvas>
       </div>
     </section>
