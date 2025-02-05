@@ -126,10 +126,10 @@ export const experiences = [
     iconBg: "#accbe1",
     date: "July 2024 - August 2024",
     points: [
-      "Developing web applications using Ruby, Ruby on Rails and Javascript and and other related technologies.",
-      "Collaborating with cross-functional teams including designers and other developers to create unique and interesting projects.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing websites using Wordpress.",
+      "Working on mobile applications using React Native and Typescript.",
+      "Implementing interesting designs and features to enhance user experience.",
+      "Participating in development of projects on a strict time schedule.",
     ],
   },
   {
