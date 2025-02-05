@@ -1,4 +1,7 @@
-import { ecc, devs, alc, wagon } from "../assets/images";
+import { ecc, devs, alc, wagon} from "../assets/images";
+import  robinson  from "../assets/images/robinson.png";
+import goldware from "../assets/images/goldware.png";
+
 import {
   car,
   contact,
@@ -29,7 +32,7 @@ import {
   waru,
   barberking,
   swinging,
-  brain
+  brain 
 } from "../assets/icons";
 
 export const skills = [
@@ -88,11 +91,7 @@ export const skills = [
     name: "GitHub",
     type: "Version Control",
   },
-  {
-    imageUrl: express,
-    name: "Express",
-    type: "Backend",
-  },
+
   {
     imageUrl: nextjs,
     name: "Next.js",
@@ -106,11 +105,38 @@ export const skills = [
 ];
 
 export const experiences = [
+
+  {
+    title: "UI/UX Design & Frontend Development",
+    company_name: "Robinson Consulting",
+    icon: robinson,
+    iconBg: "#b7e4c7",
+    date: "September 2024 - January 2025",
+    points: [
+      "Developing UI/UX design and front-end development using Javascript, React and other related technologies.",
+      "Collaborating with a small team of designers and developers to create unique and interesting projects.",
+      "Implementing modern design patterns and best practices.",
+      "Participating in team building activities and contributing to the development of projects.",
+    ],
+  },
   {
     title: "Web Development",
-    company_name: "Le Wagon",
-    icon: wagon,
+    company_name: "Goldware Park",
+    icon: goldware,
     iconBg: "#accbe1",
+    date: "July 2024 - August 2024",
+    points: [
+      "Developing web applications using Ruby, Ruby on Rails and Javascript and and other related technologies.",
+      "Collaborating with cross-functional teams including designers and other developers to create unique and interesting projects.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Web Development Education",
+    company_name: "Le Wagon Bootcamp",
+    icon: wagon,
+    iconBg: "#b7e4c7",
     date: "January 2024 - March 2024",
     points: [
       "Developing web applications using Ruby, Ruby on Rails and Javascript and and other related technologies.",
@@ -123,7 +149,7 @@ export const experiences = [
     title: "Full Stack Engineer",
     company_name: "100 Devs Agency",
     icon: devs,
-    iconBg: "#fbc3bc",
+    iconBg: "#a2d2ff",
     date: "Jan 2023 - Present",
     points: [
       "Developing web applications using React.js and other related technologies.",
