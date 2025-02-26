@@ -1,6 +1,8 @@
-import { ecc, devs, alc, wagon} from "../assets/images";
-import  robinson  from "../assets/images/robinson.png";
+import { ecc, devs, alc, wagon } from "../assets/images";
+import robinson from "../assets/images/robinson.png";
 import goldware from "../assets/images/goldware.png";
+
+
 
 import {
   car,
@@ -32,7 +34,8 @@ import {
   waru,
   barberking,
   swinging,
-  brain 
+  brain,
+  
 } from "../assets/icons";
 
 export const skills = [
@@ -101,11 +104,10 @@ export const skills = [
     imageUrl: tailwindcss,
     name: "Tailwind CSS",
     type: "Frontend",
-  }
+  },
 ];
 
 export const experiences = [
-
   {
     title: "UI/UX Design & Frontend Development",
     company_name: "Robinson Consulting",
@@ -180,78 +182,99 @@ export const experiences = [
       "Fostering a positive and inclusive learning environment, where students felt comfortable expressing themselves and taking risks with language.",
       "Adapting my teaching methods and maintaining a flexibility to cater to various learning styles,technological advancements, students and ensuring a relevance and accessibility.",
       "Assessing my students' progress thoughtfully and providing constructive feedback as well as guiding them towards improvement while acknowledging their achievements, while fostering a growth mindset in language acquisition.",
-
     ],
   },
 ];
 
 export const socialLinks = [
   {
-    name: 'Contact',
+    name: "Contact",
     iconUrl: contact,
-    link: '/contact',
+    link: "/contact",
   },
   {
-    name: 'GitHub',
+    name: "GitHub",
     iconUrl: github,
-    link: 'https://github.com/GutarManboy1',
+    link: "https://github.com/GutarManboy1",
   },
   {
-    name: 'LinkedIn',
+    name: "LinkedIn",
     iconUrl: linkedin,
-    link: 'www.linkedin.com/in/glenn-torrens/',
-  }
+    link: "www.linkedin.com/in/glenn-torrens/",
+  },
 ];
 
 export const projects = [
   {
     iconUrl: storytime,
-    theme: 'btn-back-red',
-    name: 'Story Time',
-    description: 'An AI text and image generated app where users can choose their own adventure through genre, language difficulty level(based on the CEFL structure), and length. Created with the ChatGPT api to generate text and the DallE api; built upon Ruby on Rails. Once created a user can begin their own adventure whilst keeping track of the vocabulary by creating flashcards. Learners can pause and resume their story whenever they like by looking into their library.',
-    link: 'https://github.com/GutarManboy1/story-time',
+    theme: "btn-back-red",
+    name: "Story Time",
+    description:
+      "An AI text and image generated app where users can choose their own adventure through genre, language difficulty level(based on the CEFL structure), and length. Created with the ChatGPT api to generate text and the DallE api; built upon Ruby on Rails. Once created a user can begin their own adventure whilst keeping track of the vocabulary by creating flashcards. Learners can pause and resume their story whenever they like by looking into their library.",
+    link: "https://github.com/GutarManboy1/story-time",
   },
   {
     iconUrl: dice,
-    theme: 'btn-back-green',
-    name: 'Dice House',
-    description: 'A full stack app built upon Ruby on Rails with Javascript, that allows users to rent games and post their own games to be lent.',
-    link: 'https://github.com/GutarManboy1/rails-board-game-rentals',
+    theme: "btn-back-green",
+    name: "Dice House",
+    description:
+      "A full stack app built upon Ruby on Rails with Javascript, that allows users to rent games and post their own games to be lent.",
+    link: "https://github.com/GutarManboy1/rails-board-game-rentals",
+  },
+  {
+    iconUrl: react,
+    theme: "btn-back-white",
+    name: "React-Movies",
+    description:
+      "React app built with Javascript with a backend created in appwrite. Users can search for movies and see the most popular movies according to the TMDB API.",
+    link: "https://github.com/GutarManboy1/React-Movies",
   },
   {
     iconUrl: hatano,
-    theme: 'btn-back-yellow',
-    name: 'Hatano Yakitori',
-    description: 'A Japanese chicken skewer resturant serving delicious meals and hearty laughs to a local clientele in the city of Suginami, Tokyo.',
-    link: 'https://github.com/GutarManboy1/Portfolio-Site-Hatano',
+    theme: "btn-back-yellow",
+    name: "Hatano Yakitori",
+    description:
+      "A Japanese chicken skewer resturant serving delicious meals and hearty laughs to a local clientele in the city of Suginami, Tokyo.",
+    link: "https://github.com/GutarManboy1/Portfolio-Site-Hatano",
   },
   {
     iconUrl: waru,
-    theme: 'btn-back-blue',
-    name: 'Waru Izakaya',
-    description: 'Cozy neighborhood Japanese eatery located in the outskirts of Tokyo, serving a diverse range of dishes and spirits.',
-    link: 'https://github.com/GutarManboy1/Portfolio-Site-Waru',
+    theme: "btn-back-blue",
+    name: "Waru Izakaya",
+    description:
+      "Cozy neighborhood Japanese eatery located in the outskirts of Tokyo, serving a diverse range of dishes and spirits.",
+    link: "https://github.com/GutarManboy1/Portfolio-Site-Waru",
   },
   {
     iconUrl: barberking,
-    theme: 'btn-back-pink',
-    name: 'Barber King',
-    description: 'A specialized barber shop in Fussa, Tokyo that focuses on exclusively providing high-end grooming services for clients seeking bespoke and intricate haircuts, beard styling, and grooming experiences. ',
-    link: 'https://github.com/GutarManboy1/Portfolio-Site-BarberKing',
+    theme: "btn-back-pink",
+    name: "Barber King",
+    description:
+      "A specialized barber shop in Fussa, Tokyo that focuses on exclusively providing high-end grooming services for clients seeking bespoke and intricate haircuts, beard styling, and grooming experiences. ",
+    link: "https://github.com/GutarManboy1/Portfolio-Site-BarberKing",
   },
   {
     iconUrl: swinging,
-    theme: 'btn-back-black',
-    name: 'Swinging Market Landing Page',
-    description: 'Simple yet aesthetically pleasing page for a popular skate shop located on the hip outskirts of Shimokitawa, Tokyo',
-    link: 'https://github.com/GutarManboy1/Portfolio-Site-SwingingMarket',
+    theme: "btn-back-black",
+    name: "Swinging Market Landing Page",
+    description:
+      "Simple yet aesthetically pleasing page for a popular skate shop located on the hip outskirts of Shimokitawa, Tokyo",
+    link: "https://github.com/GutarManboy1/Portfolio-Site-SwingingMarket",
   },
   {
     iconUrl: brain,
-    theme: 'btn-back-yellow',
-    name: 'JavaScript/Ruby Build Exercises and Questions',
-    description: 'Assortment of Javascript/Ruby build exercises and questions used to deepen my knowledge and flex my mental muscles.',
-    link: 'https://github.com/GutarManboy1/Javascript-Ruby-Exercises',
-
-  }
+    theme: "btn-back-yellow",
+    name: "JavaScript/Ruby Build Exercises Pt. 1",
+    description:
+      "Assortment of Javascript/Ruby build exercises and questions used to deepen my knowledge and flex my mental muscles.",
+    link: "https://github.com/GutarManboy1/Javascript-Ruby-Exercises",
+  },
+  {
+    iconUrl: brain,
+    theme: "btn-back-red",
+    name: "JavaScript/Ruby Build Exercises Pt.2",
+    description:
+      "Assortment of Javascript/Ruby build exercises and questions used to deepen my knowledge and flex my mental muscles.",
+    link: "https://github.com/GutarManboy1/Javascript-Ruby-Exercises-Pt.2",
+  },
 ];
