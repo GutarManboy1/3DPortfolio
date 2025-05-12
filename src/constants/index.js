@@ -2,8 +2,6 @@ import { ecc, devs, alc, wagon } from "../assets/images";
 import robinson from "../assets/images/robinson.png";
 import goldware from "../assets/images/goldware.png";
 
-
-
 import {
   car,
   contact,
@@ -35,7 +33,6 @@ import {
   barberking,
   swinging,
   brain,
-  
 } from "../assets/icons";
 
 export const skills = [
@@ -210,7 +207,7 @@ export const projects = [
     theme: "btn-back-red",
     name: "Story Time",
     description:
-      "An AI text and image generated app where users can choose their own adventure through genre, language difficulty level(based on the CEFL structure), and length. Created with the ChatGPT api to generate text and the DallE api; built upon Ruby on Rails. Once created a user can begin their own adventure whilst keeping track of the vocabulary by creating flashcards. Learners can pause and resume their story whenever they like by looking into their library.",
+      "This is my second group project which I am proud of. It is an AI text and image generated app where users can choose their own adventure through genre, language difficulty level(based on the CEFL structure), and length. Created with the ChatGPT api to generate text and the DallE api; built upon Ruby on Rails. Once created a user can begin their own adventure whilst keeping track of the vocabulary by creating flashcards. Learners can pause and resume their story whenever they like by looking into their library.",
     link: "https://github.com/GutarManboy1/story-time",
   },
   {
@@ -218,12 +215,20 @@ export const projects = [
     theme: "btn-back-green",
     name: "Dice House",
     description:
-      "A full stack app built upon Ruby on Rails with Javascript, that allows users to rent games and post their own games to be lent.",
+      "This is my first group project which prepared me for the challenges of working within a team. It is a full stack app built upon Ruby on Rails with Javascript, that allows users to rent games and post their own games to be lent.",
     link: "https://github.com/GutarManboy1/rails-board-game-rentals",
   },
   {
     iconUrl: react,
     theme: "btn-back-white",
+    name: "React SaaS Landing Page",
+    description:
+      "React app built with Javascript for a video editing company called Xora. Users can quickly and easily edit videos across multiple platforms. Informing the user about pricing plans, features, and a download section on a sleek single page application.",
+    link: "https://githhttps://github.com/GutarManboy1/React-SaaS-Landingub.com/GutarManboy1/React-Movies",
+  },
+  {
+    iconUrl: react,
+    theme: "btn-back-red",
     name: "React-Movies",
     description:
       "React app built with Javascript with a backend created in appwrite. Users can search for movies and see the most popular movies according to the TMDB API.",
