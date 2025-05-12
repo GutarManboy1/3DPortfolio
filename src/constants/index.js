@@ -224,7 +224,7 @@ export const projects = [
     name: "React SaaS Landing Page",
     description:
       "React app built with Javascript for a video editing company called Xora. Users can quickly and easily edit videos across multiple platforms. Informing the user about pricing plans, features, and a download section on a sleek single page application.",
-    link: "https://githhttps://github.com/GutarManboy1/React-SaaS-Landingub.com/GutarManboy1/React-Movies",
+    link: "https://github.com/GutarManboy1/React-SaaS-Landing",
   },
   {
     iconUrl: react,
