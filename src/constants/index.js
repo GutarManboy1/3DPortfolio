@@ -220,6 +220,14 @@ export const projects = [
   },
   {
     iconUrl: react,
+    theme: "btn-back-red",
+    name: "React Gsap Korova",
+    description:
+      "React app built with Javascript and Gsap for a bar named Korova. Users can see a list of cocktails, their ingredients and where to purchase them.",
+    link: "https://github.com/GutarManboy1/React-Gsap",
+  },
+  {
+    iconUrl: react,
     theme: "btn-back-white",
     name: "React SaaS Landing Page",
     description:

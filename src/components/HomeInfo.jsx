@@ -14,8 +14,8 @@ const InfoBox = ({text, link, btnText})=>(
 
 const renderContent = {
     1:(
-        <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>Hi, I'm <span className='font-semibold'>Glenn Torrens</span>🤓<br/>
-        A Software Engineer from New York 🗽 <br />Currently living in Japan 🇯🇵⛩️🔰👺🇯🇵
+        <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-6'>Hi, I'm <span className='font-semibold'>Glenn Torrens</span>🤓<br/>
+       From New York 🗽 ➸ to Japan 🇯🇵👺🇯🇵 <br /> Use the arrow ← ✈️ → keys to navigate 
         </h1>
     ),
     2:(
@@ -28,7 +28,7 @@ const renderContent = {
     3:(
         <InfoBox 
             text ="Here are some of the sites that I've created. Curious? 
-            Go ahead and take a peek!"
+            Go ahead and take a look!"
             link="/projects"
             btnText="Visit my portfolio"
         />
