@@ -1,4 +1,4 @@
-import React, { useRef, useState, Suspense } from 'react';
+import React, { useRef, useState, Suspense, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 
@@ -15,16 +15,41 @@ const Contact = () => {
 
   const { alert, showAlert, hideAlert } = useAlert();
 
+  useEffect(() => {
+    // Initialize EmailJS with public key
+    if (import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY) {
+      emailjs.init(import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY);
+    }
+  }, []);
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   };
   const handleSubmit = (e) => {
-    console.log(formRef.current)
     e.preventDefault();
+
+    // Basic validation
+    if (!form.name || !form.email || !form.message) {
+      showAlert({ show: true, text: 'Please fill in all fields', type: 'danger' });
+      return;
+    }
+
+    // Check if EmailJS is configured
+    if (!import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY ||
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY === 'your_public_key_here') {
+      showAlert({ show: true, text: 'Email service not configured. Please set up EmailJS credentials.', type: 'danger' });
+      return;
+    }
+
     setIsLoading(true);
     setcurrentAnimation('hit');
 
-    console.log(import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY)
+    console.log('EmailJS Config:', {
+      serviceId: import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      templateId: import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      publicKey: import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+      formData: form
+    });
 
     emailjs.send(
       import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -51,10 +76,13 @@ const Contact = () => {
 
     }).catch((error) => {
       setIsLoading(false);
-      console.log(error);
       setcurrentAnimation('idle');
-      console.log(error);
-      showAlert({ show: true, text: 'Oops, Where is your message?', type: 'danger' });
+      console.error('EmailJS Error:', error);
+      showAlert({
+        show: true,
+        text: 'Failed to send message. Please check your EmailJS configuration.',
+        type: 'danger'
+      });
     })
   };
 
