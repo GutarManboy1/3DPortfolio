@@ -36,6 +36,8 @@ import waru from './waru.svg'
 import barberking from './barberking.svg'
 import swinging from './swinging.svg'
 import brain from './brain.svg'
+import flutter from './flutter.svg'
+import firestore from './firestore.svg'
 
 export {
     css,
@@ -75,5 +77,7 @@ export {
     waru,
     barberking,
     swinging,
-    brain
+    brain,
+    flutter,
+    firestore
 }

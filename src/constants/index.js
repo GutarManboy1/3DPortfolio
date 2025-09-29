@@ -1,6 +1,7 @@
 import { ecc, devs, alc, wagon } from "../assets/images";
 import robinson from "../assets/images/robinson.png";
 import goldware from "../assets/images/goldware.png";
+import iiba from "../assets/images/iiba.png";
 
 import {
   car,
@@ -33,9 +34,33 @@ import {
   barberking,
   swinging,
   brain,
+  typescript,
+  flutter,
+  firestore
 } from "../assets/icons";
 
 export const skills = [
+  {
+    imageUrl: react,
+    name: "React",
+    type: "Frontend",
+  },
+  {
+    imageUrl: typescript,
+    name: "TypeScript",
+    type: "Frontend",
+  },
+
+  {
+    imageUrl: javascript,
+    name: "JavaScript",
+    type: "Frontend",
+  },
+  {
+    imageUrl: flutter,
+    name: "Flutter",
+    type: "Web & Mobile",
+  },
   {
     imageUrl: ruby,
     name: "Ruby",
@@ -47,21 +72,6 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: react,
-    name: "React",
-    type: "Frontend",
-  },
-  {
-    imageUrl: nodejs,
-    name: "Node.js",
-    type: "Backend",
-  },
-  {
-    imageUrl: javascript,
-    name: "JavaScript",
-    type: "Frontend",
-  },
-  {
     imageUrl: html,
     name: "HTML",
     type: "Frontend",
@@ -70,6 +80,16 @@ export const skills = [
     imageUrl: css,
     name: "CSS",
     type: "Frontend",
+  },
+  {
+    imageUrl: nodejs,
+    name: "Node.js",
+    type: "Backend",
+  },
+  {
+    imageUrl: firestore,
+    name: "Firestore",
+    type: "Database",
   },
   {
     imageUrl: mongodb,
@@ -105,6 +125,19 @@ export const skills = [
 ];
 
 export const experiences = [
+  {
+    title: "Full Stack Engineer",
+    company_name: "iiba",
+    icon: iiba,
+    iconBg: "#a2d2ff",
+    date: "August 2025 - Present",
+    points: [
+      "Flutter development with Dart and other related technologies.",
+      "Working  on a mobile application called iiba with a small team of designers and developers to help parents find interesting locations for their children to create lifelong memories.",
+      "Developing the admin panel using Flutter and other related technologies such as Firebase and Cloud Firestore.",
+      "Working remotely through Slack further developed my Japanese skills.",
+    ],
+  },
   {
     title: "UI/UX Design & Frontend Development",
     company_name: "Robinson Consulting",
